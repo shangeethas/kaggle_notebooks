@@ -26,45 +26,33 @@
             <template>
               <v-card>
                 <v-toolbar flat color="primary" dark>
-                  <v-toolbar-title>Display Notebook</v-toolbar-title>
+                  <v-toolbar-title>An Experiment Search Tool for Data Scientists</v-toolbar-title>
                 </v-toolbar>
                 <v-tabs vertical>
                   <v-tab>
-                    <v-icon left> mdi-account </v-icon>
+                    <v-icon left> mdi-access-point </v-icon>
+                    Glove, FastText, Paragram
                     CPU
                   </v-tab>
                   <v-tab>
-                    <v-icon left> mdi-lock </v-icon>
+                    <v-icon left> mdi-access-point </v-icon>
+                    Glove, FastText, Paragram
                     GPU
                   </v-tab>
                   <v-tab>
                     <v-icon left> mdi-access-point </v-icon>
-                    Option 3
+                    Glove, FastText
+                    CPU
                   </v-tab>
 
                   <v-tab-item>
                     <v-card flat>
                       <v-card-text>
                         <p>
-                          <iframe
-                            width="700"
+                          <iframe id="Ex7_Nb20"
+                            width="1000"
                             height=" 600"
-                            src= "https://gist.github.com/shangeethas/145dd572508f5fb8cafb691e36ba4b33.js"></iframe>
-                        </p>
-                        <p>
-                          Nam ipsum risus, rutrum vitae, vestibulum
-                          eu, molestie vel, lacus. Aenean tellus
-                          metus, bibendum sed, posuere ac, mattis non,
-                          nunc. Aliquam lobortis. Aliquam lobortis.
-                          Suspendisse non nisl sit amet velit
-                          hendrerit rutrum.
-                        </p>
-
-                        <p class="mb-0">
-                          Phasellus dolor. Fusce neque. Fusce
-                          fermentum odio nec arcu. Pellentesque libero
-                          tortor, tincidunt et, tincidunt eget, semper
-                          nec, quam. Phasellus blandit leo ut odio.
+                            src="/Users/shangeetha/Desktop/Kaggle_Notebooks_Git/20/do-pretrained-embeddings-give-you-the-extra-edge.pdf"></iframe>
                         </p>
                       </v-card-text>
                     </v-card>
@@ -73,68 +61,10 @@
                     <v-card flat>
                       <v-card-text>
                         <p>
-                          <iframe
-                            width="700"
+                          <iframe id="Ex1_Nb4"
+                            width="1000"
                             height=" 600"
-                            src="file:///Users/shangeetha/Desktop/Kaggle_NLP_Notebooks/4/a-look-at-different-embeddings.py"></iframe>
-                        </p>
-
-                        <p>
-                          Suspendisse feugiat. Suspendisse faucibus,
-                          nunc et pellentesque egestas, lacus ante
-                          convallis tellus, vitae iaculis lacus elit
-                          id tortor. Proin viverra, ligula sit amet
-                          ultrices semper, ligula arcu tristique
-                          sapien, a accumsan nisi mauris ac eros. In
-                          hac habitasse platea dictumst. Fusce ac
-                          felis sit amet ligula pharetra condimentum.
-                        </p>
-
-                        <p>
-                          Sed consequat, leo eget bibendum sodales,
-                          augue velit cursus nunc, quis gravida magna
-                          mi a libero. Nam commodo suscipit quam. In
-                          consectetuer turpis ut velit. Sed cursus
-                          turpis vitae tortor. Aliquam eu nunc.
-                        </p>
-
-                        <p>
-                          Etiam ut purus mattis mauris sodales
-                          aliquam. Ut varius tincidunt libero. Aenean
-                          viverra rhoncus pede. Duis leo. Fusce
-                          fermentum odio nec arcu.
-                        </p>
-
-                        <p class="mb-0">
-                          Donec venenatis vulputate lorem. Aenean
-                          viverra rhoncus pede. In dui magna, posuere
-                          eget, vestibulum et, tempor auctor, justo.
-                          Fusce commodo aliquam arcu. Suspendisse enim
-                          turpis, dictum sed, iaculis a, condimentum
-                          nec, nisi.
-                        </p>
-                      </v-card-text>
-                    </v-card>
-                  </v-tab-item>
-                  <v-tab-item>
-                    <v-card flat>
-                      <v-card-text>
-                        <p>
-                          Fusce a quam. Phasellus nec sem in justo
-                          pellentesque facilisis. Nam eget dui. Proin
-                          viverra, ligula sit amet ultrices semper,
-                          ligula arcu tristique sapien, a accumsan
-                          nisi mauris ac eros. In dui magna, posuere
-                          eget, vestibulum et, tempor auctor, justo.
-                        </p>
-
-                        <p class="mb-0">
-                          Cras sagittis. Phasellus nec sem in justo
-                          pellentesque facilisis. Proin sapien ipsum,
-                          porta a, auctor quis, euismod ut, mi. Donec
-                          quam felis, ultricies nec, pellentesque eu,
-                          pretium quis, sem. Nam at tortor in tellus
-                          interdum sagittis.
+                            src="/Users/shangeetha/Desktop/Kaggle_Notebooks_Git/4/a-look-at-different-embeddings.pdf"></iframe>
                         </p>
                       </v-card-text>
                     </v-card>
@@ -173,5 +103,28 @@
         window.interact = interact
     })()
   </script>
+  <script type="application/javascript">
+
+  function resizeIFrameToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+  }
+
+  window.addEventListener('DOMContentLoaded', function(e) {
+
+    var iFrame = document.getElementById( 'iFrame1' );
+    resizeIFrameToFitContent( iFrame );
+
+    // or, to resize all iframes:
+    var iframes = document.querySelectorAll("iframe");
+    for( var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent( iframes[i] );
+    }
+} );
+
+</script>
+
+<iframe src="usagelogs/default.aspx" id="iFrame1"></iframe>
   </body>
 </html>
