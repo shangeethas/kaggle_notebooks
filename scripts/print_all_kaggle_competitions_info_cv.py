@@ -28,39 +28,39 @@ def print_competitions_info(page=1):
     time.sleep(1)
     print('Competitions size ' + str(len(competitions)))
 
-    cv_completed_competitions = ['Digit Recognizer', 'State Farm Distracted Driver Detection', 'Kannada MNIST',
-                                 'Peking University/Baidu - Autonomous Driving', 'TReNDS Neuroimaging',
-                                 'Google Landmark Recognition 2020', 'Open Images 2019 - Object Detection',
-                                 'Google Landmark Retrieval 2020', 'NFL 1st and Future - Impact Detection',
+    cv_completed_competitions = ['digit-recognizer', 'state-farm-distracted-driver-detection', 'kannada-mnist',
+                                 'peking-university/baidu - autonomous-driving', 'trends-neuroimaging',
+                                 'google-landmark-recognition-2020', 'open-images-2019 - object-detection',
+                                 'google-landmark-retrieval-2020', 'nfl-1st-and-future - impact-detection',
                                  'Open Images 2019 - Visual Relationship', 'Machine Learning@NTUT - Computer Vision',
                                  'KUL H02A5a Computer Vision: Group assignment 0',
                                  'NYU Computer Vision - CSCI-GA.2271 2019',
-                                 'NYU Computer Vision - CSCI-GA.2271 2020', 'SFU CMPT Computer Vision Course CNN Lab',
-                                 'Computer Vision Competition[SC-2020]', 'Computer Vision Competition[SC-2020]',
-                                 'ML Guild Computer Vision Practicum', 'Computer Vision Training Camp 2020 - Starter',
+                                 'NYU Computer Vision - CSCI-GA.2271 2020', 'sfu-cmpt-computer-vision-course-cnn-lab',
+                                 'Computer Vision Competition[SC-2020]', 'computer-vision-competition[sc-2020]',
+                                 'ml-guild-computer-vision-practicum', 'Computer Vision Training Camp 2020 - Starter',
                                  'DUTh DEECE - Computer Vision 2019-20 - Homework 4',
-                                 'KUL HO2A5a Computer Vision: Group assignment 1',
+                                 'kul-HO2a5a-computer-vision: group-assignment-1',
                                  'Inter IT -- Computer Vision', 'Computer Vision Training Camp 2020 - Advanced',
-                                 'Applications of Deep Learning(WUSTL, Spring 2020B)',
-                                 'Applications of Deep Learning(WUSTL, Spring 2020)',
-                                 'Computer Vision Training Camp 2020',
-                                 'Rice University: Data Mining & Statistical Learning', 'AU-ECE-CVML2021',
-                                 'Thousand Facial Landmarks', 'Car plates OCR', 'Computer vision CS543/ECE549',
-                                 'Bird Identification', 'intro-dl', 'AU-ENG-CVML2018',
+                                 'applications-of-deep-learning(WUSTL, Spring 2020B)',
+                                 'applications-of-deep-learning(WUSTL, Spring 2020)',
+                                 'computer-vision-training-camp-2020',
+                                 'Rice University: Data Mining & Statistical Learning', 'au-ece-cvml2021',
+                                 'thousand-facial-landmarks', 'car-plates-ocr', 'computer-vision-cs543/ece549',
+                                 'bird-identification', 'intro-dl', 'au-eng-cvml2018',
                                  'AlBiz 2020 Spring Task 3: Fashion MNIST', 'Tiny Image Net Challenge - TCD',
-                                 'AU-ENG-CVML2020', 'AU-ENG-CVML2019', 'JAMP Hackathon Drive 1',
-                                 'ECE281B2017', 'Jio Hackthon 2', 'Gradient\'s Computer Vision Challenge',
-                                 'TJ Computer Vision Test', 'Bird Identification',
-                                 'Parrot 2nd computer vision competition', 'VietAI Advanced Class 00 Final Project',
-                                 'Tiny Imagenet Challenge', 'MNIST classification', '2020 Fall:Instance Segmentation',
-                                 '2021 Sptring Instance Segmentation', 'Machine Learning@NTUT 2018',
-                                 'CS543/ECE549 Assignment 4: Deep Convoultional Neural Networks',
-                                 'Machine Learning@NTUT 2019', 'ML Guild CV Practicum',
-                                 'CTE-DL4CV Assignment 1'
+                                 'au-eng-cvml2020', 'au-eng-cvml2019', 'jamp-hackathon-drive-1',
+                                 'ece281b2017', 'jio-hackthon-2', 'Gradient\'s Computer Vision Challenge',
+                                 'tj-computer-vision-test', 'bird-identification',
+                                 'parrot-2nd-computer-vision-competition', 'vietai-advanced-class-00-final-project',
+                                 'tiny-imagenet-challenge', 'mnist-classification', '2020-fall:instance-segmentation',
+                                 '2021-sptring-instance-segmentation', 'machine-learning@ntut-2018',
+                                 'cs543/ece549-assignment-4: deep-convoultional-neural-networks',
+                                 'Machine Learning@NTUT 2019', 'ml-guild-cv-practicum',
+                                 'cte-dl4cv-assignment-1'
                                  ]
-    cv_same_competition_names = ['Digit Recognizer']
 
     for competition in competitions:
+        print('Competition Name : ' + competition.ref)
         if competition.ref in cv_completed_competitions:
             print('Competition Name : ' + competition.ref)
             print_all_kernels_info(competition=competition.ref, api=api)
@@ -103,7 +103,7 @@ def print_notebook_kernels_info(competition, api):
             # kernelRef = ""
             for kernel in kernels_scripts:
                 if kernel.totalVotes >= 150:
-                    api.kernels_pull(kernel.ref, "/Users/shangeetha/Desktop/Kaggle_Competition_NLP_150")
+                    api.kernels_pull(kernel.ref, "/Users/shangeetha/Desktop/Kaggle_Competition_CV_150")
 
             if not kernels_scripts: break
 
@@ -118,8 +118,8 @@ def print_all_kernels_info(competition, api):
 
         # kernelRef = ""
         for kernel in kernels_scripts:
-            if kernel.totalVotes >= 0:
-                folderName = "/Users/shangeetha/Desktop/Kaggle_Competition_CV_0/" + competition
+            if kernel.totalVotes >= 150:
+                folderName = "/Users/shangeetha/Desktop/Kaggle_Competition_CV_150/" + competition
                 api.kernels_pull(kernel.ref, folderName)
 
         if not kernels_scripts: break
