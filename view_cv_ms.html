@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <v-container>
+            <template>
+              <v-card>
+                <v-toolbar flat color="primary" dark>
+                  <v-toolbar-title>Computer Vision - Model Selection</v-toolbar-title>
+                </v-toolbar>
+                <v-tabs vertical>
+                  <v-tab id="Ex1_Nb1">
+                    <v-icon left> mdi-access-point </v-icon>
+                    <br>X seconds per epoch</br>
+                    <br>CPU/GPU/TPU</br>
+                  </v-tab>
+                  <v-tab id="Ex2_Nb2">
+                    <v-icon left> mdi-access-point </v-icon>
+                    <br>X seconds per epoch</br>
+                    <br>CPU/GPU/TPU</br>
+                  </v-tab>
+                  <v-tab id="Ex3_Nb3">
+                    <v-icon left> mdi-access-point </v-icon>
+                    <br>X seconds per epoch</br>
+                    <br>CPU/GPU/TPU</br>
+                  </v-tab>
+                  <v-tab id="Ex4_Nb4">
+                    <v-icon left> mdi-access-point </v-icon>
+                    <br>X seconds per epoch</br>
+                    <br>CPU/GPU/TPU</br>
+                  </v-tab>
+                  <v-tab id="Ex5_Nb5">
+                    <v-icon left> mdi-access-point </v-icon>
+                    <br>X seconds per epoch</br>
+                    <br>CPU/GPU/TPU</br>
+                  </v-tab>
+                  <v-tab-item>
+                    <v-card flat>
+                      <p>
+                          <iframe id="Ex1_Nb1_Ms1"
+                            width="800"
+                            height="1000"
+                            src="CV/1/inchi-resnet-lstm-with-attention-starter.pdf"></iframe>
+                        </p>
+                    </v-card>
+                  </v-tab-item>
+                  <v-tab-item>
+                    <v-card flat>
+                      <v-card-text>
+                        <p>
+                          <iframe id="Ex2_Nb2_Ms2"
+                            width="800"
+                            height="1000"
+                            src="CV/2/inchi-resnet-lstm-with-attention-inference.pdf"></iframe>
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-tab-item>
+                  <v-tab-item>
+                    <v-card flat>
+                      <v-card-text>
+                        <p>
+                          <iframe id="Ex3_Nb3_3"
+                            width="800"
+                            height="1000"
+                            src="CV/3/molecular-translation-exploratory-data-analysis.pdf"></iframe>
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-tab-item>
+                  <v-tab-item>
+                    <v-card flat>
+                      <v-card-text>
+                        <p>
+                          <iframe id="Ex4_Nb4_4"
+                            width="800"
+                            height="1000"
+                            src="CV/4/"></iframe>
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-tab-item>
+                  <v-tab-item>
+                    <v-card flat>
+                      <v-card-text>
+                        <p>
+                          <iframe id="Ex5_Nb5_5"
+                            width="800"
+                            height="1000"
+                            src="CV/5/"></iframe>
+                        </p>
+                      </v-card-text>
+                    </v-card>
+                  </v-tab-item>
+                </v-tabs>
+              </v-card>
+            </template>
+          </v-container>
+        </v-main>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+      });
+    </script>
+    <script>
+    (function setupNbinteract() {
+        // If NbInteract hasn't loaded, wait one second and try again
+        if (window.NbInteract === undefined) {
+        setTimeout(setupNbinteract, 1000)
+        return
+        }
+
+        var interact = new window.NbInteract({
+        spec: '{GitHub_UserName}/{Gist_ID}/master',
+        baseUrl: 'https://mybinder.org',
+        provider: 'gist',
+        })
+        interact.prepare()
+
+        window.interact = interact
+    })()
+  </script>
+  <script type="application/javascript">
+
+  function resizeIFrameToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+  }
+
+  window.addEventListener('DOMContentLoaded', function(e) {
+
+    var iFrame = document.getElementById( 'iFrame1' );
+    resizeIFrameToFitContent( iFrame );
+
+    // or, to resize all iframes:
+    var iframes = document.querySelectorAll("iframe");
+    for( var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent( iframes[i] );
+    }
+} );
+
+</script>
+
+<iframe src="usagelogs/default.aspx" id="iFrame1"></iframe>
+  </body>
+</html>
