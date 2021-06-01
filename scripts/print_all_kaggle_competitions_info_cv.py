@@ -65,8 +65,18 @@ def print_competitions_info(page=1):
                                  'vinbigdata-chest-xray-abnormalities-detection', 'ranzcr-clip-catheter-line-classification',
                                  'cassava-leaf-disease-classification', 'nfl-impact-detection', 'lyft-motion-prediction-autonomous-vehicles',
                                  'rsna-str-pulmonary-embolism-detection', 'osic-pulmonary-fibrosis-progression', 'landmark-recognition-2020',
-                                 'global-wheat-detection', 'landmark-retrieval-2020', 'siim-isic-melanoma-classification', 'open-images-object-detection-rvc-2020',
-                                 ]
+                                 'global-wheat-detection', 'landmark-retrieval-2020', 'siim-isic-melanoma-classification',
+                                 'open-images-object-detection-rvc-2020', 'open-images-instance-segmentation-rvc-2020',
+                                 'prostate-cancer-grade-assessment', 'alaska2-image-steganalysis', 'trends-assessment-prediction',
+                                 'imet-2020-fgvc7', 'iwildcam-2020-fgvc7', 'herbarium-2020-fgvc7', 'plant-pathology-2020-fgvc7',
+                                 'imaterialist-fashion-2020-fgvc7', 'flower-classification-with-tpus', 'imagenet-object-localization-challenge',
+                                 'ds4g-environmental-insights-explorer', 'pku-autonomous-driving', 'Kannada-MNIST', 'understanding_cloud_organization',
+                                 'rsna-intracranial-hemorrhage-detection', '3d-object-detection-for-autonomous-vehicles',
+                                 'severstal-steel-defect-detection', 'kuzushiji-recognition', 'open-images-2019-object-detection',
+                                 'open-images-2019-visual-relationship', 'open-images-2019-instance-segmentation',
+                                 'recursion-cellular-image-classification', 'aptos2019-blindness-detection', 'siim-acr-pneumothorax-segmentation',
+                                 'generative-dog-images', 'aerial-cactus-identification', 'imaterialist-fashion-2019-FGVC6', 'inaturalist-2019-fgvc6',
+                                 'imet-2019-fgvc6', 'iwildcam-2019-fgvc6']
 
     for competition in competitions:
         print('Competition Name : ' + competition.ref)
