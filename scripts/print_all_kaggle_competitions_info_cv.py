@@ -59,7 +59,7 @@ def print_competitions_info(page=1):
     #                             'cte-dl4cv-assignment-1'
     #                             ]
     # competitions from the list of Kaggle API printing and data set is cross checked to have images
-    cv_completed_competitions = ['bms-molecular-translation', 'iwildcam2021-fgvc8', 'herbarium-2021-fgvc8',
+    cv_downloaded_competitions = ['bms-molecular-translation', 'iwildcam2021-fgvc8', 'herbarium-2021-fgvc8',
                                  'plant-pathology-2021-fgvc8', 'hotel-id-2021-fgvc8', 'indoor-location-navigation',
                                  'hpa-single-cell-image-classification', 'hubmap-kidney-segmentation', 'shopee-product-matching',
                                  'vinbigdata-chest-xray-abnormalities-detection', 'ranzcr-clip-catheter-line-classification',
@@ -77,12 +77,17 @@ def print_competitions_info(page=1):
                                  'recursion-cellular-image-classification', 'aptos2019-blindness-detection', 'siim-acr-pneumothorax-segmentation',
                                  'generative-dog-images', 'aerial-cactus-identification', 'imaterialist-fashion-2019-FGVC6', 'inaturalist-2019-fgvc6',
                                  'imet-2019-fgvc6', 'iwildcam-2019-fgvc6']
+    cv_completed_competitions = ['petfinder-adoption-prediction', 'histopathologic-cancer-detection', 'humpback-whale-identification',
+                                 'human-protein-atlas-image-classification', 'airbus-ship-detection', 'inclusive-images-challenge',
+                                 'rsna-pneumonia-detection-challenge', 'tgs-salt-identification-challenge', 'google-ai-open-images-object-detection-track',
+                                 'google-ai-open-images-visual-relationship-track', 'whale-categorization-playground', 'avito-demand-prediction',
+                                 'imaterialist-challenge-fashion-2018', 'imaterialist-challenge-furniture-2018']
 
     for competition in competitions:
         print('Competition Name : ' + competition.ref)
         if competition.ref in cv_completed_competitions:
             print('Competition Name : ' + competition.ref)
-            print_all_kernels_info(competition=competition.ref, api=api)
+            #print_all_kernels_info(competition=competition.ref, api=api)
 
     if competitions:
         print_competitions_info(page=page + 1)
