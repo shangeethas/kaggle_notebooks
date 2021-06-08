@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+		<link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+		<link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+		<meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+	</head>
+	<body>
+		<div id="app">
+			<v-app>
+				<v-main>
+					<v-container>
+						<template>
+							<v-card>
+								<v-toolbar flat color="primary" dark>
+									<v-toolbar-title>Computer Vision - Model Selection</v-toolbar-title>
+								</v-toolbar>
+								<v-tabs vertical>
+									<v-tab id="Ex1_Nb1">
+										<v-card flat>
+											<v-card-title class="text-subtitle-1">Getting started with cnn and vgg16</v-card-title>
+											<v-card-actions class="pa-0">
+												<v-list-item class="grow">
+													<v-list-item-content class="font-weight-regular">
+                                GPU
+                              </v-list-item-content>
+													<v-row align="center" justify="end">
+														<span class="subheading mr-2 font-weight-regular">39 seconds/epoch</span>
+													</v-row>
+												</v-list-item>
+											</v-card-actions>
+										</v-card>
+									</v-tab>
+									<v-tab id="Ex2_Nb2" class="">
+										<v-card flat class="">
+											<v-card-title class="text-subtitle-1">Getting started with 100 flowers on tpu</v-card-title>
+											<v-card-actions class="pa-0">
+												<v-list-item class="grow">
+													<v-list-item-content class="font-weight-regular">
+                                GPU/TPU
+                              </v-list-item-content>
+													<v-row align="center" justify="end">
+														<span class="subheading mr-2 font-weight-regular">39 seconds/epoch</span>
+													</v-row>
+												</v-list-item>
+											</v-card-actions>
+										</v-card>
+									</v-tab>
+									<v-tab-item>
+										<v-card flat>
+											<v-card-text class="pa-0">
+												<iframe id="Ex1_Nb1_Ms1"
+                            height="1000"
+                            class="frame"
+                            src="CV/1/getting-started-with-cnn-and-vgg16.pdf"></iframe>
+											</v-card-text>
+										</v-card>
+									</v-tab-item>
+									<v-tab-item>
+										<v-card flat>
+											<v-card-text class="pa-0">
+												<iframe id="Ex2_Nb2_Ms2"
+                            height="1000"
+                            class="frame"
+                            src="CV/2/getting-started-with-100-flowers-on-tpu.pdf"></iframe>
+											</v-card-text>
+										</v-card>
+									</v-tab-item>
+								</v-tabs>
+							</v-card>
+						</template>
+					</v-container>
+				</v-main>
+			</v-app>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+		<script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+      });
+    </script>
+		<script>
+    (function setupNbinteract() {
+        // If NbInteract hasn't loaded, wait one second and try again
+        if (window.NbInteract === undefined) {
+        setTimeout(setupNbinteract, 1000)
+        return
+        }
+
+        var interact = new window.NbInteract({
+        spec: '{GitHub_UserName}/{Gist_ID}/master',
+        baseUrl: 'https://mybinder.org',
+        provider: 'gist',
+        })
+        interact.prepare()
+
+        window.interact = interact
+    })()
+  </script>
+		<script type="application/javascript">
+
+  function resizeIFrameToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+  }
+
+  window.addEventListener('DOMContentLoaded', function(e) {
+
+    var iFrame = document.getElementById( 'iFrame1' );
+    resizeIFrameToFitContent( iFrame );
+
+    // or, to resize all iframes:
+    var iframes = document.querySelectorAll("iframe");
+    for( var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent( iframes[i] );
+    }
+} );
+
+
+		</script>
+		<style scoped lang="scss">
+    .v-tabs--vertical>.v-tabs-bar .v-tab {
+        height: 86px;
+        padding: 0;
+    }
+
+    .v-tabs-slider-wrapper {
+        height: 86px !important;
+    }
+
+    .frame {
+        width: 100%;
+        border: 0;
+    }
+</style>
+		<iframe src="usagelogs/default.aspx" id="iFrame1"></iframe>
+	</body>
+</html>
