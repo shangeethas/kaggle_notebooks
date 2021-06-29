@@ -29,16 +29,22 @@ def print_competitions_info(page=1):
     print('Competitions size ' + str(len(competitions)))
     # competitions from the list of visual inspection of Kaggle competition website
     # ts_competitions =
-    # competitions from the list of Kaggle API printing and data set is cross checked to have images
-    ts_completed_competitions = ['competitive-data-science-predict-future-sales', 'birdclef-2021', 'ncaam-march-mania-2021',
+    # competitions from the list of Kaggle API printing and data set is cross checked to have date time feature
+    ts_completed_competitions = ['birdclef-2021', 'ncaam-march-mania-2021',
                                  'ncaam-march-mania-2021-spread', 'rfcx-species-audio-detection', 'acea-water-prediction',
                                  'nfl-big-data-bowl-2021', 'predict-volcanic-eruptions-ingv-oe', 'osic-pulmonary-fibrosis-progression',
                                  'birdsong-recognition', 'm5-forecasting-accuracy', 'm5-forecasting-uncertainty', 'herbarium-2020-fgvc7',
                                  'liverpool-ion-switching', 'covid19-global-forecasting-week-5', 'march-madness-analytics-2020',
-                                 'covid19-global-forecasting-week-4', 'covid19-global-forecasting-week-3', 'covid19-global-forecasting-week-2', 'covid19-global-forecasting-week-1']
+                                 'covid19-global-forecasting-week-4', 'covid19-global-forecasting-week-3', 'covid19-global-forecasting-week-2', 'covid19-global-forecasting-week-1',
+                                 'data-science-bowl-2019', 'nfl-big-data-bowl-2020', 'nfl-playing-surface-analytics',
+                                 'ashrae-energy-prediction',
+                                 'bigquery-geotab-intersection-congestion', 'youtube8m-2019', 'ieee-fraud-detection',
+                                 'two-sigma-financial-news', 'freesound-audio-tagging-2019',
+                                 'inaturalist-2019-fgvc6', 'iwildcam-2019-fgvc6', 'LANL-Earthquake-Prediction',
+                                 'predicting-red-hat-business-value']
     # cdp-unlocking-climate-solutions - huge dataset with multiple datasets -  don't know whether time element is available
     # Not full list of time series competitions are added to downloading list of notebooks
-    # Stopped at COVID19 global forecasting week 1
+    # Stopped at LANL-Earthquake-Prediction and added predicting-red-hat-business-value from down list
 
     for competition in competitions:
         print('Competition Name : ' + competition.ref)
