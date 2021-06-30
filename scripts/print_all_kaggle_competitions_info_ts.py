@@ -37,14 +37,24 @@ def print_competitions_info(page=1):
                                  'liverpool-ion-switching', 'covid19-global-forecasting-week-5', 'march-madness-analytics-2020',
                                  'covid19-global-forecasting-week-4', 'covid19-global-forecasting-week-3', 'covid19-global-forecasting-week-2', 'covid19-global-forecasting-week-1',
                                  'data-science-bowl-2019', 'nfl-big-data-bowl-2020', 'nfl-playing-surface-analytics',
-                                 'ashrae-energy-prediction',
-                                 'bigquery-geotab-intersection-congestion', 'youtube8m-2019', 'ieee-fraud-detection',
+                                 'ashrae-energy-prediction', 'bigquery-geotab-intersection-congestion', 'youtube8m-2019', 'ieee-fraud-detection',
                                  'two-sigma-financial-news', 'freesound-audio-tagging-2019',
-                                 'inaturalist-2019-fgvc6', 'iwildcam-2019-fgvc6', 'LANL-Earthquake-Prediction',
-                                 'predicting-red-hat-business-value']
+                                 'inaturalist-2019-fgvc6', 'iwildcam-2019-fgvc6', 'LANL-Earthquake-Prediction', 'mens-machine-learning-competition-2019',
+                                 'womens-machine-learning-competition-2019', 'vsb-power-line-fault-detection', 'elo-merchant-category-recommendation',
+                                 'ga - customer - revenue - prediction', 'reducing-commercial-aviation-fatalities', 'NFL-Punt-Analytics-Competition',
+                                  'PLAsTiCC-2018', 'quickdraw-doodle-recognition', 'new-york-city-taxi-fare-prediction'
+                                 'predicting-red-hat-business-value', 'flavours-of-physics-kernels-only',
+                                 'home-credit-default-risk', 'freesound-audio-tagging', 'avito-demand-prediction', 'inaturalist-2018',
+                                 'talkingdata-adtracking-fraud-detection', 'donorschoose-application-screening',
+                                 'mens-machine-learning-competition-2018', 'womens-machine-learning-competition-2018',
+                                 'recruit-restaurant-visitor-forecasting', 'favorita-grocery-sales-forecasting',
+                                 'zillow-prize-1', 'kkbox-music-recommendation-challenge', 'web-traffic-time-series-forecasting',
+                                 ]
     # cdp-unlocking-climate-solutions - huge dataset with multiple datasets -  don't know whether time element is available
     # Not full list of time series competitions are added to downloading list of notebooks
-    # Stopped at LANL-Earthquake-Prediction and added predicting-red-hat-business-value from down list
+    # Excluded forest-cover-type-kernels-only because it had time related values for example value at noon, value at 3 pm etc.
+    # Stopped at LANL-Earthquake-Prediction and
+    # added predicting-red-hat-business-value from down list
 
     for competition in competitions:
         print('Competition Name : ' + competition.ref)
