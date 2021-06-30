@@ -60,13 +60,20 @@ def print_competitions_info(page=1):
                                  'telstra-recruiting-network', 'prudential-life-insurance-assessment', 'airbnb-recruiting-new-user-bookings',
                                  'cervical-cancer-screening', 'the-winton-stock-market-challenge', 'walmart-recruiting-trip-type-classification',
                                  'rossmann-store-sales', 'how-much-did-it-rain-ii', 'deloitte-western-australia-rental-prices',
-                                 'coupon-purchase-prediction', 'grasp-and-lift-eeg-detection']
+                                 'coupon-purchase-prediction', 'grasp-and-lift-eeg-detection', 'liberty-mutual-group-property-inspection-prediction',
+                                 'pycon-2015-tutorial-predict-closed-questions-on-stack-overflow', 'avito-context-ad-clicks',
+                                 'diabetic-retinopathy-detection', 'pkdd-15-predict-taxi-service-trajectory-i'
+                                 'pkdd-15-taxi-trip-time-prediction-ii', 'predict-west-nile-virus', 'facebook-recruiting-iv-human-or-bot',
+                                 'random-acts-of-pizza', 'bike-sharing-demand', 'walmart-recruiting-sales-in-stormy-weather',
+                                 'how-much-did-it-rain', 'restaurant-revenue-prediction', '15-071x-the-analytics-edge-competition-spring-2015',
+                                 'march-machine-learning-mania-2015', '15-071x-the-analytics-edge-spring-20152',
+                                 'datasciencebowl']
     # cdp-unlocking-climate-solutions - huge dataset with multiple datasets -  don't know whether time element is available
     # Not full list of time series competitions are added to downloading list of notebooks
-    # Excluded forest-cover-type-kernels-only because it had time related values for example value at noon, value at 3 pm etc.
+    # Excluded forest-cover-type-kernels-only, forest-cover-type-prediction  because it had time related values for example value at noon, value at 3 pm etc.
     # Stopped at LANL-Earthquake-Prediction and
     # added predicting-red-hat-business-value from down list
-    # double check street-view-getting-started-with-julia, bosch-production-line-performance
+    # double check street-view-getting-started-with-julia, bosch-production-line-performance, icdm-2015-drawbridge-cross-device-connections
 
 
     for competition in competitions:
