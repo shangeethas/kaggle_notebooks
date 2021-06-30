@@ -67,7 +67,9 @@ def print_competitions_info(page=1):
                                  'random-acts-of-pizza', 'bike-sharing-demand', 'walmart-recruiting-sales-in-stormy-weather',
                                  'how-much-did-it-rain', 'restaurant-revenue-prediction', '15-071x-the-analytics-edge-competition-spring-2015',
                                  'march-machine-learning-mania-2015', '15-071x-the-analytics-edge-spring-20152',
-                                 'datasciencebowl']
+                                 'datasciencebowl', 'inria-bci-challenge', 'avazu-ctr-prediction', 'helping-santas-helpers',
+                                 'seizure-prediction', 'tradeshift-text-classification', 'avito-prohibited-content', 'seizure-detection',
+                                 'decoding-the-human-brain']
     # cdp-unlocking-climate-solutions - huge dataset with multiple datasets -  don't know whether time element is available
     # Not full list of time series competitions are added to downloading list of notebooks
     # Excluded forest-cover-type-kernels-only, forest-cover-type-prediction  because it had time related values for example value at noon, value at 3 pm etc.
