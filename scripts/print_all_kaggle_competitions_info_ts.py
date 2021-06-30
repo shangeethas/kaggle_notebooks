@@ -42,19 +42,32 @@ def print_competitions_info(page=1):
                                  'inaturalist-2019-fgvc6', 'iwildcam-2019-fgvc6', 'LANL-Earthquake-Prediction', 'mens-machine-learning-competition-2019',
                                  'womens-machine-learning-competition-2019', 'vsb-power-line-fault-detection', 'elo-merchant-category-recommendation',
                                  'ga - customer - revenue - prediction', 'reducing-commercial-aviation-fatalities', 'NFL-Punt-Analytics-Competition',
-                                  'PLAsTiCC-2018', 'quickdraw-doodle-recognition', 'new-york-city-taxi-fare-prediction'
-                                 'predicting-red-hat-business-value', 'flavours-of-physics-kernels-only',
-                                 'home-credit-default-risk', 'freesound-audio-tagging', 'avito-demand-prediction', 'inaturalist-2018',
+                                 'PLAsTiCC-2018', 'quickdraw-doodle-recognition', 'new-york-city-taxi-fare-prediction',
+                                 'flavours-of-physics-kernels-only', 'home-credit-default-risk', 'freesound-audio-tagging', 'avito-demand-prediction', 'inaturalist-2018',
                                  'talkingdata-adtracking-fraud-detection', 'donorschoose-application-screening',
                                  'mens-machine-learning-competition-2018', 'womens-machine-learning-competition-2018',
                                  'recruit-restaurant-visitor-forecasting', 'favorita-grocery-sales-forecasting',
                                  'zillow-prize-1', 'kkbox-music-recommendation-challenge', 'web-traffic-time-series-forecasting',
-                                 ]
+                                 'nyc-taxi-trip-duration', 'instacart-market-basket-analysis',
+                                 'inaturalist-challenge-at-fgvc-2017', 'sberbank-russian-housing-market',
+                                 'youtube8m', 'two-sigma-connect-rental-listing-inquiries', 'data-science-bowl-2017',
+                                 'the-nature-conservancy-fisheries-monitoring', 'march-machine-learning-mania-2017',
+                                 'two-sigma-financial-modeling', 'outbrain-click-prediction',
+                                 'santander-product-recommendation', 'melbourne-university-seizure-prediction', 'painter-by-numbers',
+                                 'predicting-red-hat-business-value', 'grupo-bimbo-inventory-demand',
+                                 'facebook-v-predicting-check-ins', 'kobe-bryant-shot-selection',
+                                 'expedia-hotel-recommendations', 'sf-crime', 'march-machine-learning-mania-2016',
+                                 'telstra-recruiting-network', 'prudential-life-insurance-assessment', 'airbnb-recruiting-new-user-bookings',
+                                 'cervical-cancer-screening', 'the-winton-stock-market-challenge', 'walmart-recruiting-trip-type-classification',
+                                 'rossmann-store-sales', 'how-much-did-it-rain-ii', 'deloitte-western-australia-rental-prices',
+                                 'coupon-purchase-prediction', 'grasp-and-lift-eeg-detection']
     # cdp-unlocking-climate-solutions - huge dataset with multiple datasets -  don't know whether time element is available
     # Not full list of time series competitions are added to downloading list of notebooks
     # Excluded forest-cover-type-kernels-only because it had time related values for example value at noon, value at 3 pm etc.
     # Stopped at LANL-Earthquake-Prediction and
     # added predicting-red-hat-business-value from down list
+    # double check street-view-getting-started-with-julia, bosch-production-line-performance
+
 
     for competition in competitions:
         print('Competition Name : ' + competition.ref)
