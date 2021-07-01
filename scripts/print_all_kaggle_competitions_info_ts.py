@@ -69,7 +69,18 @@ def print_competitions_info(page=1):
                                  'march-machine-learning-mania-2015', '15-071x-the-analytics-edge-spring-20152',
                                  'datasciencebowl', 'inria-bci-challenge', 'avazu-ctr-prediction', 'helping-santas-helpers',
                                  'seizure-prediction', 'tradeshift-text-classification', 'avito-prohibited-content', 'seizure-detection',
-                                 'decoding-the-human-brain']
+                                 'decoding-the-human-brain', 'kdd-cup-2014-predicting-excitement-at-donors-choose', 'acquire-valued-shoppers-challenge',
+                                 'allstate-purchase-prediction-challenge', 'the-analytics-edge-mit-15-071x', 'walmart-recruiting-store-sales-forecasting',
+                                 'march-machine-learning-mania-2014', 'pakdd-cup-2014', 'see-click-predict-fix', 'boston-data-festival-hackathon',
+                                 'expedia-personalized-sort', 'belkin-energy-disaggregation-competition', 'the-seeclickfix-311-challenge',
+                                 'the-icml-2013-bird-challenge', 'kdd-cup-2013-author-disambiguation', 'icdar2013-stroke-recovery-from-offline-data',
+                                 'bluebook-for-bulldozers', 'hhp', 'job-salary-prediction', 'predicting-parkinson-s-disease-progression-with-smartphone-data',
+                                 'event-recommendation-engine-challenge', 'leapfrogging-leaderboards', 'visualize-the-state-of-education-in-colorado',
+                                 'predict-closed-questions-on-stack-overflow', 'global-energy-forecasting-competition-2012-load-forecasting',
+                                 'GEF2012-wind-forecasting', 'MerckActivity', 'acm-sf-chapter-hackathon-big', 'acm-sf-chapter-hackathon-small',
+                                 'detecting-insults-in-social-commentary', 'Raising-Money-to-Fund-an-Organizational-Mission', 'MusicHackathon',
+                                 'online-sales', 'benchmark-bond-trade-price-challenge', 'dsg-hackathon', 'WhatDoYouKnow', 'AlgorithmicTradingChallenge',
+                                 'wikichallenge', 'WIC2011', 'unimelb', 'tourism2', 'Eurovision2010']
     # cdp-unlocking-climate-solutions - huge dataset with multiple datasets -  don't know whether time element is available
     # Not full list of time series competitions are added to downloading list of notebooks
     # Excluded forest-cover-type-kernels-only, forest-cover-type-prediction  because it had time related values for example value at noon, value at 3 pm etc.
